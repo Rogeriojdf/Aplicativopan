@@ -4,17 +4,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnProximo"
+    <EditText
+        android:id="@+id/editNota1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Proxima tela" />
+        android:hint="Digite a nota P1"
+        android:inputType="number"/>
 
     <EditText
-        android:id="@+id/editValor"
+        android:id="@+id/editNota2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Digite um valor"
+        android:hint="Digite a nota P2"
         android:inputType="number"/>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular Media"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/editPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o Peso"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/editAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a Altrua"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btnImc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular IMC"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/txtResultadoImc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:textAlignment="center"/>
 
 </LinearLayout>
