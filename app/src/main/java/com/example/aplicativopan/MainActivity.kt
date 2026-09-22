@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.aulaid)
 
+        val oi="ii"
         val botao = findViewById<Button>(R.id.btnProximo)
         val texto = findViewById<EditText>(R.id.editValor)
 
