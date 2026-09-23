@@ -5,11 +5,11 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/txtExerc1"
+        android:id="@+id/txtExercicio1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="Exercico 1: Dobro do numero"
+        android:text="Exercic1o 1: Dobro do numero"/>
 
 
     <EditText
