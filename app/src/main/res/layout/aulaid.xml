@@ -36,14 +36,14 @@
         android:id="@+id/editPeso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Digite o Peso"
+        android:hint="Digite o Peso em Kg"
         android:inputType="numberDecimal"/>
 
     <EditText
         android:id="@+id/editAltura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Digite a Altrua"
+        android:hint="Digite a Altura em metros"
         android:inputType="numberDecimal"/>
 
     <Button

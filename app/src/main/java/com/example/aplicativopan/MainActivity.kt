@@ -34,7 +34,20 @@ class MainActivity : AppCompatActivity() {
         botaoimc.setOnClickListener {
             val multiplica = (altura.text.toString().toFloat() * altura.text.toString().toFloat())
             val imc = (peso.text.toString().toFloat()) / multiplica
-            resultadoimc.text = imc.toString()
+            resultadoimc.text = "IMC é: " + imc.toString()
+
+            if (imc <18.5)
+            {
+                resultadoimc.text = imc.toString() + " Abaixo do peso"
+            }else if(imc >= 18.5 && imc <= 24.9) {
+                resultadoimc.text = imc.toString() + " Peso Normal"
+            }
+            else if(imc >= 25 && imc <= 29.9) {
+                resultadoimc.text = imc.toString() + " Sobrepeso"
+            }else {
+                resultadoimc.text = imc.toString() + " Obesidade"
+            }
+
 
         }
 
