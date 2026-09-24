@@ -228,7 +228,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="Exercic1o 7: Analisador de Desconto Progressivo por Valor"/>
+        android:text="Exercicio 7: Analisador de Desconto Progressivo por Valor"/>
 
 
     <EditText
@@ -242,7 +242,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnExerc7"
-        android:text="Calcular Dobro"/>
+        android:text="Calcular Desconto Progressivo"/>
 
     <TextView
         android:id="@+id/txtExerc7"

@@ -61,25 +61,63 @@ class MainActivity : AppCompatActivity() {
                     + notaP2.text.toString().toDouble()) / 2).toString()
         }
 
-        val idadeg = findViewById<EditText>(R.id.edtExec6Idadeg)
-        val resultadoimc = findViewById<TextView>(R.id.txtResultadoImc)
-        val botaoExerc6 = findViewById<Button>(R.id.btnExerc6Imc)
+            val edtExerc6 = findViewById<EditText>(R.id.edtExec6)
+            val botaoExerc6 = findViewById<Button>(R.id.btnExerc6)
+            val txtExerc6 = findViewById<TextView>(R.id.txtExerc6)
 
-        botaoExerc6.setOnClickListener {
 
-            val imc = (idadeg.text.toString().toFloat()) / multiplica
-            resultadoimc.text = "IMC é: " + imc.toString()
-
-            if (imc <18.5)
-            {
-                resultadoimc.text = imc.toString() + " Abaixo do peso"
-            }else if(imc >= 18.5 && imc <= 24.9) {
-                resultadoimc.text = imc.toString() + " Peso Normal"
+            botaoExerc6.setOnClickListener {
+                val texto = edtExerc6.text.toString()
+                if (texto.isNotEmpty()) {
+                    val idadeC = texto.toInt()
+                    val categoria = if (idadeC < 12) {
+                        "Criança"
+                    } else if (idadeC >= 12 && idadeC < 17) {
+                        "Adolescente"
+                    } else if (idadeC >= 18 && idadeC < 59) {
+                        "Adulto"
+                    } else {
+                        "Idoso"
+                    }
+                    txtExerc6.text = "Resultado: $categoria"
+                } else {
+                    txtExerc6.text = "Resultado: Digite a idade."
+                }
             }
-            else if(imc >= 25 && imc <= 29.9) {
-                resultadoimc.text = imc.toString() + " Sobrepeso"
-            }else {
-                resultadoimc.text = imc.toString() + " Obesidade"
+        val compra = findViewById<EditText>(R.id.edtExec7)
+        val btnCalDesconto = findViewById<Button>(R.id.btnExerc7)
+        val txtResulDesconto = findViewById<TextView>(R.id.txtExerc7)
+
+        btnCalDesconto.setOnClickListener {
+            val texto = compra.text.toString()
+            if (texto.isNotEmpty()) {
+                val valorCompra = texto.toDouble()
+
+                val descontoPercentual: Int
+                val valorFinal: Double
+                if (valorCompra < 100.0) {
+                    descontoPercentual = 0
+                    valorFinal = valorCompra
+                }
+                else if
+                    (valorCompra < 300.0){
+                    descontoPercentual = 5
+                    valorFinal = valorCompra * 0.95
+                }
+                else if (valorCompra < 500.0) {
+                    descontoPercentual = 10
+                    valorFinal = valorCompra * 0.90
+                }
+                else{
+                    descontoPercentual = 15
+                    valorFinal = valorCompra * 0.85
+                }
+
+                txtResulDesconto.text = "Desconto: $descontoPercentual% | Total: R$ ${String.format("%.2f", valorFinal)}"
+            } else {
+                txtResulDesconto.text = "Resultado: Digite o valor da compra."
             }
+        }
+
     }
 }
