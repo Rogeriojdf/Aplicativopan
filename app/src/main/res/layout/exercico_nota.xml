@@ -2,14 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="15dp">
 
     <TextView
         android:id="@+id/txtExercicio1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="Exercic1o 1: Dobro do numero"/>
+        android:text="Exercicio 1: Dobro do numero"/>
 
 
     <EditText
@@ -31,7 +32,229 @@
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:textAlignment="center"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#333333"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/txtExercicio2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Exercicio 2: Idade em dias"/>
 
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtExec2"
+        android:hint="Digite um Idade em anos"
+        android:inputType="number"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnExerc2"
+        android:text="Calcular Idade"/>
+
+    <TextView
+        android:id="@+id/txtExerc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#333333"
+        android:text=""
+        />
+
+
+    <TextView
+        android:id="@+id/txtExercicio3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Exercicio 3: Gorjeto (10%)"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtExec3"
+        android:hint="Digite um valor"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnExerc3"
+        android:text="Calcular 10%"/>
+
+    <TextView
+        android:id="@+id/txtExerc3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#333333"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/txtExercicio4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Exercicio 4: Dolar para Real (Cambio Fixo: 5,0)"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtExec4"
+        android:hint="Digite um valor em Dolar"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnExerc4"
+        android:text="Calcular em Real"/>
+
+    <TextView
+        android:id="@+id/txtExerc4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#333333"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/txtExercicio5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Exercicio 5: Media de dois notas"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtN1"
+        android:hint="Digite a Nota 1"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtN2"
+        android:hint="Digite a Nota 2"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMedia"
+        android:text="Calcular media"/>
+
+    <TextView
+        android:id="@+id/txtExerc5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#333333"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/txtExercicio6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Exercicio 6: Classificador de Categoria por Idade"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtExec6"
+        android:hint="Digite um numero inteiro"
+        android:inputType="number"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnExerc6"
+        android:text="Calcular categoria de Idade"/>
+
+    <TextView
+        android:id="@+id/txtExerc6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#333333"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/txtExercicio7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Exercic1o 7: Analisador de Desconto Progressivo por Valor"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtExec7"
+        android:hint="Digite um numero inteiro"
+        android:inputType="number"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnExerc7"
+        android:text="Calcular Dobro"/>
+
+    <TextView
+        android:id="@+id/txtExerc7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#333333"
+        android:text=""
+        />
 </LinearLayout>
