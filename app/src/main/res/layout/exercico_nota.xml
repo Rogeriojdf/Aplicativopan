@@ -240,7 +240,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/edtExec7"
         android:hint="Digite um numero inteiro"
-        android:inputType="number"/>
+        android:inputType="numberDecimal"/>
 
     <Button
         android:layout_width="match_parent"
