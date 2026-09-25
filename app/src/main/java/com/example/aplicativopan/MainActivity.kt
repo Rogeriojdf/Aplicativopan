@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
 
         botaoExerc3.setOnClickListener {
             var conta= edtExerc3.text.toString().toDouble() * 0.1
-            txtExerc3.text = "Valor com desconto (10%) = " + conta.toString() + " reais"
+            
+            txtExerc3.text = "Valor com desconto (10%) = " + ("R$ %.2f", conta)
         }
 
         val botaoExerc4 = findViewById<Button>(R.id.btnExerc4)
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         botaoExerc4.setOnClickListener {
             var dolar= edtExerc4.text.toString().toDouble() * 5
-            txtExerc4.text = "Valor da conversão é R$ " + dolar.toString().toDouble()
+            txtExerc4.text = "Valor da conversão é R$ " + ("R$ %.2f", dolar)
         }
 
         val notaP1 = findViewById<EditText>(R.id.edtN1)
