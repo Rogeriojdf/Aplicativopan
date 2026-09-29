@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,9 +39,9 @@ class MainActivity : AppCompatActivity() {
         val txtExerc3 = findViewById<TextView>(R.id.txtExerc3)
 
         botaoExerc3.setOnClickListener {
-            var conta= edtExerc3.text.toString().toDouble() * 0.1
-            
-            txtExerc3.text = "Valor com desconto (10%) = " + ("R$ %.2f", conta)
+            var conta = edtExerc3.text.toString().toDouble() * 0.1
+
+            txtExerc3.text = "Valor com desconto (10%) = " + "R$ %.2f" + conta
         }
 
         val botaoExerc4 = findViewById<Button>(R.id.btnExerc4)
@@ -48,8 +49,8 @@ class MainActivity : AppCompatActivity() {
         val txtExerc4 = findViewById<TextView>(R.id.txtExerc4)
 
         botaoExerc4.setOnClickListener {
-            var dolar= edtExerc4.text.toString().toDouble() * 5
-            txtExerc4.text = "Valor da conversão é R$ " + ("R$ %.2f", dolar)
+            var dolar = edtExerc4.text.toString().toDouble() * 5
+            txtExerc4.text = "Valor da conversão é R$ " + "R$ %.2f" + dolar
         }
 
         val notaP1 = findViewById<EditText>(R.id.edtN1)
@@ -62,29 +63,31 @@ class MainActivity : AppCompatActivity() {
                     + notaP2.text.toString().toDouble()) / 2).toString()
         }
 
-            val edtExerc6 = findViewById<EditText>(R.id.edtExec6)
-            val botaoExerc6 = findViewById<Button>(R.id.btnExerc6)
-            val txtExerc6 = findViewById<TextView>(R.id.txtExerc6)
+        val edtExerc6 = findViewById<EditText>(R.id.edtExec6)
+        val botaoExerc6 = findViewById<Button>(R.id.btnExerc6)
+        val txtExerc6 = findViewById<TextView>(R.id.txtExerc6)
 
 
-            botaoExerc6.setOnClickListener {
-                val texto = edtExerc6.text.toString()
-                if (texto.isNotEmpty()) {
-                    val idadeC = texto.toInt()
-                    val categoria = if (idadeC < 12) {
-                        "Criança"
-                    } else if (idadeC >= 12 && idadeC < 17) {
-                        "Adolescente"
-                    } else if (idadeC >= 18 && idadeC < 59) {
-                        "Adulto"
-                    } else {
-                        "Idoso"
-                    }
-                    txtExerc6.text = "Resultado: $categoria"
+        botaoExerc6.setOnClickListener {
+            val texto = edtExerc6.text.toString()
+            if (texto.isNotEmpty()) {
+                val idadeC = texto.toInt()
+                val categoria = if (idadeC < 12) {
+                    "Criança"
+                } else if (idadeC >= 12 && idadeC < 17) {
+                    "Adolescente"
+                } else if (idadeC >= 18 && idadeC < 59) {
+                    "Adulto"
                 } else {
-                    txtExerc6.text = "Resultado: Digite a idade."
+                    "Idoso"
                 }
+                txtExerc6.text = "Resultado: $categoria"
+            } else {
+                txtExerc6.text = "Resultado: Digite a idade."
+
             }
+
+        }
         val compra = findViewById<EditText>(R.id.edtExec7)
         val btnCalDesconto = findViewById<Button>(R.id.btnExerc7)
         val txtResulDesconto = findViewById<TextView>(R.id.txtExerc7)
@@ -96,29 +99,29 @@ class MainActivity : AppCompatActivity() {
 
                 val descontoPercentual: Int
                 val valorFinal: Double
-                if (valorCompra < 100.0) {
+                if (valorCompra < 100.0)
+                {
                     descontoPercentual = 0
                     valorFinal = valorCompra
-                }
-                else if
-                    (valorCompra < 300.0){
+                } else if (valorCompra < 300.0) {
                     descontoPercentual = 5
                     valorFinal = valorCompra * 0.95
-                }
-                else if (valorCompra < 500.0) {
+                } else if (valorCompra < 500.0) {
                     descontoPercentual = 10
                     valorFinal = valorCompra * 0.90
-                }
-                else{
+                } else {
                     descontoPercentual = 15
                     valorFinal = valorCompra * 0.85
                 }
 
-                txtResulDesconto.text = "Desconto: $descontoPercentual% | Total: R$ ${String.format("%.2f", valorFinal)}"
+                txtResulDesconto.text = "Desconto: $descontoPercentual% | Total: R$ ${valorFinal}"
+
             } else {
                 txtResulDesconto.text = "Resultado: Digite o valor da compra."
             }
         }
-
     }
+
 }
+
+
