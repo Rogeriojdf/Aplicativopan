@@ -3,7 +3,37 @@ package com.example.console
 class MinhaClasse {
 }
 
+fun MediaEtec(mencaoAtividade: String, mencaoProjeto: String, mencaoProva: String) {
+    if (mencaoProva == "MB" &&
+        (mencaoProjeto == "MB" || mencaoAtividade == "MB")
+    ) {
+        print("Aluno fica com MB")
+    } else if (mencaoProva == "B" || (mencaoProjeto == "MB" && mencaoAtividade == "MB")) {
+        print("Aluno fica com MB")
+    } else if (mencaoProva == "B" && (mencaoProjeto == "B" || mencaoAtividade == "B")) {
+        print("Aluno fica com B")
+    } else if (mencaoProva == "B" && (mencaoProjeto == "R" && mencaoAtividade == "R")) {
+        print("Aluno fica com R")
+    } else {
+        print("Aluno fica com I")
+    }
+
+}
+
+
 fun main() {
+    print("Qual é a Menção da ATividade? ")
+    val mencaoAtiviade = readln().toString()
+
+    print("Qual é a Menção da Projeto? ")
+    val mencaoProjeto = readln().toString()
+
+    print("Qual é a Menção da Prova? ")
+    val mencaoProva = readln().toString()
+
+    MediaEtec(mencaoAtiviade, mencaoProjeto, mencaoProva)
+
+   }
     //println("Hello World!! Bem Vindo!")
 
     //val nome = "Ana"
@@ -53,4 +83,3 @@ fun main() {
     //    println(naipe)
 //    }
 
-}
