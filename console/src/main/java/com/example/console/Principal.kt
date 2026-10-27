@@ -3,6 +3,32 @@ package com.example.console
 class MinhaClasse {
 }
 
+
+data class Carta(val valor: Valor, val naipe: Naipe)
+
+fun main() {
+    val baralho = Baralho()
+    val jogador = Jogador(nome = "Fernando")
+    val jogador2 = Jogador(nome = "Rogerio")
+    val jogador3 = Jogador(nome = "Bia")
+
+    jogador.receber(Baralho.comprar())
+    jogador.receber(Baralho.comprar())
+    jogador.receber(Baralho.comprar())
+
+    jogador2.receber(Baralho.comprar())
+
+    jogador3.receber(Baralho.comprar())
+    jogador3.receber(Baralho.comprar())
+    jogador3.receber(Baralho.comprar())
+    jogador3.receber(Baralho.comprar())
+
+    jogador2.receber(Baralho.comprar())
+
+    jogador.mostrarMao ()
+    }
+
+/*
 fun MediaEtec(mencaoAtividade: String, mencaoProjeto: String, mencaoProva: String) {
     if (mencaoProva == "MB" &&
         (mencaoProjeto == "MB" || mencaoAtividade == "MB")
@@ -17,23 +43,22 @@ fun MediaEtec(mencaoAtividade: String, mencaoProjeto: String, mencaoProva: Strin
     } else {
         print("Aluno fica com I")
     }
-
 }
 
+    fun main() {
+        print("Qual é a Menção da ATividade? ")
+        val mencaoAtiviade = readln().toString()
 
-fun main() {
-    print("Qual é a Menção da ATividade? ")
-    val mencaoAtiviade = readln().toString()
+        print("Qual é a Menção da Projeto? ")
+        val mencaoProjeto = readln().toString()
 
-    print("Qual é a Menção da Projeto? ")
-    val mencaoProjeto = readln().toString()
+        print("Qual é a Menção da Prova? ")
+        val mencaoProva = readln().toString()
 
-    print("Qual é a Menção da Prova? ")
-    val mencaoProva = readln().toString()
+        MediaEtec(mencaoAtiviade, mencaoProjeto, mencaoProva)
 
-    MediaEtec(mencaoAtiviade, mencaoProjeto, mencaoProva)
-
-   }
+    }
+*/
     //println("Hello World!! Bem Vindo!")
 
     //val nome = "Ana"
@@ -82,4 +107,3 @@ fun main() {
     //for (naipe in naipes) {
     //    println(naipe)
 //    }
-
